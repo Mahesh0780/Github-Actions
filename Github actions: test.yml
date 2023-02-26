@@ -1,0 +1,41 @@
+# Github actions: is a tool to automate SDE workflows, you can write individual tasks called actions and combine them to create a custom workflows(WF).
+# A WF is custom automated process that can setup in repository, to build, test, paclage, release or deploy any code on github.
+# -> like push, pull(opened, merged),issue (created, closed), scheduled, external event - these are events
+# WF is a bunch of actions.
+# WF's runs on vms on github server, they contain one or more jobs and each job runs on its own vm.
+# Each jobs has certain steps, like action, shell commands ....
+# jobs can run parlell or depend on each other
+
+# Runner: responsible for running jobs whenever event occurs and displays results, runner can be hosted by github or individual host
+# github hosted (restrict on h/w): runs on github server, will have some preinstalled s/w's (curl,git,npm,yarn,pip | python, ruby, nodejs | android sdk, xcode)and maintained by github
+
+# WF's are written in YAML format, its a serialization language, similar to JSON
+
+#* Tabs are not allowed in YAML
+#* to write a workflow , we have to create yaml file inside a folder called workflows (.github)
+
+name : Mahesh
+age: 24
+address: "Delhi: Mumbai"
+active: true
+key:
+    key: value
+    key2: 44
+    key3:
+        key: value
+        key2: value
+jsonobj: {key: value, key2: 44, key3: { key: value, key2: value}}
+array: 
+  - item1
+  - item2
+  - {key: value}
+jsonarray: [item1, item2]
+objarray:
+    - key: value
+      key2: value2
+    - key: value
+      key2: value2
+longtext: |
+    slkfjlfjls fljlkjfJFLjf jlFJLjfljf
+    fjlsafjslfjsaljflsj lfjlsjflsjlfsjaflk
+    lkjflsjflsjflsj
