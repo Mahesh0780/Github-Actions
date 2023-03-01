@@ -9,7 +9,7 @@ jobs:
      runs-on: ubuntu-latest #vm
      steps: 
       - name: echo a string
-        run: eccho "Hello Mahesh"
+        run: echo "Hello Mahesh"
       - name: multiline script
         run: |
           node -v
