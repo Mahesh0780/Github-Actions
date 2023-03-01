@@ -7,9 +7,8 @@ jobs:
      runs-on: ubuntu-latest #vm
      steps: 
       - name: echo a string
-        run: echo "Hello Mahesh"
+        run: eccho "Hello Mahesh"
       - name: multiline script
         run: |
           node -v
           npm -v
-          
