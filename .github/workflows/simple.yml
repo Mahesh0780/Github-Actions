@@ -1,10 +1,10 @@
 name: shell commands
 
-on: [push]
+on: [push] # event
 
 jobs: 
-    run-shell-commands:
-     runs-on: ubuntu-latest
+    run-shell-commands: #name of job
+     runs-on: ubuntu-latest #vm
      steps: 
       - name: echo a string
         run: echo "Hello Mahesh"
@@ -12,17 +12,3 @@ jobs:
         run: |
           node -v
           npm -v
-      - name: python commands
-        run: |
-          import platform
-          print(platform.processor())
-        shell: python
-    run-windows-command:
-      runs-on: windows-latest
-      needs: ["run-shell-commands"]
-      steps:
-        - name: directory powershell
-          run: get-location
-        - name: directory bash
-          run: pwd
-          shell: bash
